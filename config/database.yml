@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: text_away_development
+
+test:
+  adapter: postgresql
+  database: text_away_test
