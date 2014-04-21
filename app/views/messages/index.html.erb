@@ -3,17 +3,16 @@
 
 <h2>Messages</h2>
 
-<ul>
-  <% @messages.each do |message| %>
-    <li><%= link_to message.body, message_path(message) %></li>
-  <% end %>
-</ul>
-
+<% if @messages != nil %>
+  <ul id="message_list">
+    <%= render @messages %>
+  </ul>
+<% end %>
 
 <br>
 <br>
 <br>
 
 <div class="btn-group">
-  <%= link_to "New Message", new_message_path, class: "btn btn-info", type: "button" %>
+  <%= link_to "New Message", new_message_path, class: "btn btn-info", type: "button", id: "new_btn", remote: true %>
 </div>

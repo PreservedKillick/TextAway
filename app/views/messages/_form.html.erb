@@ -2,7 +2,7 @@
 <br>
 <%= render("layouts/errors", :object => @message) %>
 
-<%= form_for @message do |f| %>
+<%= form_for @message, remote: true do |f| %>
   <form class="form-horizontal" role="form">
     <div class="form-group">
     <%= f.label :to, "Send message to:" %><br>
