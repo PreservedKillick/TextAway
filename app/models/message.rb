@@ -2,6 +2,10 @@ class Message < ActiveRecord::Base
 
   before_create :send_message
 
+  validates :body, :presence => true
+  validates :to, :presence => true
+  validates :from, :presence => true
+
 private
 
   def send_message
