@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     if @message.save
       flash[:notice] = "Message sent"
-      redirect_to messages_path
+      redirect_to message_path(@message)
     else
       render 'new'
     end

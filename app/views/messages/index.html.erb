@@ -8,3 +8,12 @@
     <li><%= link_to message.body, message_path(message) %></li>
   <% end %>
 </ul>
+
+
+<br>
+<br>
+<br>
+
+<div class="btn-group">
+  <%= link_to "New Message", new_message_path, class: "btn btn-info", type: "button" %>
+</div>

@@ -1,0 +1,19 @@
+<% content_for(:title, "Sent Message | TextAway") %>
+
+<h2>Message details</h2>
+<br>
+<h4>To:</h4>
+<p><%= @message.to %></p>
+<br>
+
+<h4>From:</h4>
+<p><%= @message.from %></p>
+<br>
+
+<h4>Text:</h4>
+<p><%= @message.body %></p>
+<br>
+
+<br>
+<br>
+<%= link_to "Home", messages_path, class: "btn btn-info" %>
