@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'cancancan', '~> 1.7'
 gem 'bootstrap-sass'
 gem 'bcrypt'
+gem 'rest-client'
 # gem 'devise'
 
 group :development do
@@ -26,6 +27,7 @@ group :test, :development do
   gem 'launchy'
   gem 'faker'
   gem 'poltergeist'
+  gem 'dotenv-rails'
 end
 
 group :test do
