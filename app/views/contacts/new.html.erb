@@ -1,0 +1,11 @@
+<% content_for(:title, "New Contact | TextAway") %>
+
+<h2>Save a new contact</h2>
+
+<%= render 'form' %>
+
+<br>
+<br>
+<br>
+<%= link_to "See Contacts", contacts_path, class: "btn btn-info", type: "button" %>
+<%= link_to "Home", messages_path, class: "btn btn-info" %>

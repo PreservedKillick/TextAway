@@ -1,14 +1,10 @@
-<% content_for(:title, "Messages | TextAway") %>
+<% content_for(:title, "Contact Info | TextAway") %>
 
+<h2><%= @contact.name %></h2>
 
-<h2>TextAway</h2>
 <br>
-
-<% if @messages != nil %>
-  <ul id="message_list">
-    <%= render @messages %>
-  </ul>
-<% end %>
+<h4>Phone number</h4>
+<h5>     <%= @contact.number %></h5>
 
 <br>
 <br>
@@ -17,5 +13,6 @@
 <div class="bs-example">
   <%= link_to "New Contact", new_contact_path, class: "btn btn-warning", type: "button" %>
   <%= link_to "See Contacts", contacts_path, class: "btn btn-primary", type: "button" %>
+  <%= link_to "Home", root_path, type: "button", class: "btn btn-success" %>
   <%= link_to "New Message", new_message_path, class: "btn btn-info", type: "button", id: "new_btn", remote: true %>
 </div>

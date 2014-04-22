@@ -1,0 +1,17 @@
+<br>
+<br>
+<%= render('layouts/errors', :object => @contact) %>
+
+<%= form_for @contact do |f| %>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="form-group">
+      <%= f.label :number %><br>
+      <%= f.text_field :number %>
+    </div>
+    <%= f.submit(:class => "btn btn-warning") %>
+  </form>
+<% end %>

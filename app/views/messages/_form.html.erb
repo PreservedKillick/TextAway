@@ -6,7 +6,7 @@
   <form class="form-horizontal" role="form">
     <div class="form-group">
     <%= f.label :to, "Send message to:" %><br>
-    <%= f.text_field :to %><br>
+    <%= f.collection_select :to, Contact.all, :number, :name %><br>
     </div>
     <div class="form-group">
     <%= f.label :from, "Message from:" %><br>

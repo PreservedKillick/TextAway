@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if contact.save
+    if @contact.save
       flash[:notice] = "Contact saved"
       redirect_to contact_path(@contact)
     else

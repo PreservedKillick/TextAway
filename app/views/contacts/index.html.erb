@@ -1,0 +1,17 @@
+<% content_for(:title, "Contacts | TextAway") %>
+
+<h2>Your contacts</h2>
+<br>
+
+<% if @contacts != nil %>
+  <ul>
+    <% @contacts.each do |contact| %>
+      <li><%= link_to "#{contact.name}", contact_path(contact) %><br>
+          <%= contact.number %></li>
+          <br><br>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "New Contact", new_contact_path, class: "btn btn-warning", type: "button" %>
+<%= link_to "Home", root_path, class: "btn btn-info" %>
