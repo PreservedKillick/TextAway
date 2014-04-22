@@ -9,18 +9,22 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
-    @message[:contact_id] = Contact.find_by_number(message_params[:to]).id
-
-    if @message.save
-      respond_to do |format|
-        format.html { redirect_to message_path(@message) }
-        format.js
+    recipient_numbers = params[:message][:to]
+    recipient_numbers.each do |number|
+      @contact = Contact.find_by_number(number)
+      @message = @contact.messages.new(message_params)
+      @message[:to] = @contact.number
+      if @message.save
+        respond_to do |format|
+          format.html { redirect_to message_path(@message) }
+          format.js
+        end
+      else
+        render 'new'
       end
-    else
-      render 'new'
     end
   end
+
 
   def show
     @message = Message.find(params[:id])

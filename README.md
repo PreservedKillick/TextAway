@@ -9,10 +9,14 @@ Build an app that lets users send text messages to their friends.
 *  As a user, I want to save contacts to an address book, so that it's easy to text them again without re-typing their phone number. DONE
 
 ####################
-dropdown menu in new message form breaks integration test b/c receiving contact now chosen directly rather than to number being entered directly
+ISSUE: dropdown menu in new message form breaks integration test b/c receiving contact now chosen directly rather than to number being entered directly
 ####################
 
-*  As a user, I want to send a message to more than one person at once, so that I can mass text my friends.
+*  As a user, I want to send a message to more than one person at once, so that I can mass text my friends. DONE
+
+####################
+ISSUE: ajax after new message created is now faulty b/c of functionality to send to multiple contacts
+####################
 
 *  As a user who receives a text message, if I text back, I want to get an automated response telling me that the phone number can't receive texts, so that I don't get sad when the sender doesn't reply. Hint: This will be a bit hard, and I don't expect you to necessarily finish this. Here are some pointers:
 
