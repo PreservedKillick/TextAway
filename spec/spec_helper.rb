@@ -46,3 +46,16 @@ RSpec.configure do |config|
   config.order = "random"
   config.include FactoryGirl::Syntax::Methods
 end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+  c.filter_sensitive_data('<twilio account sid>') { ENV['TWILIO_ACCOUNT_SID'] }
+  c.filter_sensitive_data('<twilio auth token>') { ENV['TWILIO_AUTH_TOKEN'] }
+  c.filter_sensitive_data('<twilio from number>') { ENV['TWILIO_FROM_NUMBER'] }
+  c.filter_sensitive_data('<twilio to number>') { ENV['TWILIO_TEST_TO_NUMBER'] }
+  c.ignore_request do |request|
+    URI(request.uri).host == "127.0.0.1"
+  end
+end
