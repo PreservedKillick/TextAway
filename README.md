@@ -4,8 +4,7 @@ May 21, 2014
 Build an app that lets users send text messages to their friends.
 #################################################################
 
-*  As a user, I want to send a text message to a phone number, so that I can send texts from the web.
-
+*  As a user, I want to send a text message to a phone number, so that I can send texts from the web.  DONE
 
 
 *  As a user, I want to save contacts to an address book, so that it's easy to text them again without re-typing their phone number.
@@ -22,10 +21,10 @@ Build an app that lets users send text messages to their friends.
 
   * Create a route and controller for creating inbound messages. Make a PORO model that can take a phone number and text the automated response back to it. When the inbound text is received, it will take the request, pass the phone number of the sender to the model, and the model then sends the automated response back.
 
-When writing integration tests, you can simulate Twilio's request to your app by doing something like this:
+  * When writing integration tests, you can simulate Twilio's request to your app by doing something like this:
 
-    describe "inbound text message" do
-      it "does something..." do
-        RestClient.post #make a request to your app as if you were Twilio
+      describe "inbound text message" do
+        it "does something..." do
+          RestClient.post #make a request to your app as if you were Twilio
+        end
       end
-    end
