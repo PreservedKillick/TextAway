@@ -6,14 +6,15 @@ http_interactions:
       account sid>/Messages.json
     body:
       encoding: US-ASCII
-      string: Body=Earum%20temporibus%20vel%20praesentium.&To=<twilio to number>&From=5678910
+      string: Body=Voluptate%20adipisci%20fugit%20neque%20deserunt%20in.&To=<twilio
+        to number>&From=5678910
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
       Content-Length:
-      - '71'
+      - '85'
       Content-Type:
       - application/x-www-form-urlencoded
       User-Agent:
@@ -41,5 +42,5 @@ http_interactions:
         valid phone number or shortcode.\", \"more_info\": \"https://www.twilio.com/docs/errors/21212\",
         \"status\": 400}"
     http_version: 
-  recorded_at: Tue, 22 Apr 2014 17:44:58 GMT
+  recorded_at: Tue, 22 Apr 2014 17:44:59 GMT
 recorded_with: VCR 2.9.0

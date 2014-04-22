@@ -11,4 +11,9 @@ describe Message do
     message.save.should be_false
   end
 
+  it "adds an error if the 'from' number is invalid", :vcr => true do
+    message = FactoryGirl.build(:bad_from_message)
+    message.save
+    message.errors.messages[:base].should eq ["The 'From' number 5678910 is not a valid phone number or shortcode."]
+  end
 end

@@ -2,10 +2,11 @@ require 'spec_helper'
 
 describe Message do
   it 'allows user to send and create a new text message', :js => true, :vcr => true do
-    send_and_create_message
+    message = FactoryGirl.build(:message)
+    send_and_create_message(message)
     click_on "Create Message"
-    save_and_open_page
-    page.should have_content "Message details"
+    #page.save_screenshot('tmp/screenshot.png')
+    page.should have_content message.body
   end
 
 end

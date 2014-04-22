@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     if @message.save
       respond_to do |format|
-        format.html { redirect_to messages_path }
+        format.html { redirect_to message_path(@message) }
         format.js
       end
     else
