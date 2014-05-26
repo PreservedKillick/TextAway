@@ -14,14 +14,10 @@ Build an app that lets users send text messages to their friends.
 
 *  As a user, I want to send a text message to a phone number, so that I can send texts from the web.
 
-*  As a user, I want to save contacts to an address book, so that it's easy to text them again without re-typing their phone number. DONE
+*  As a user, I want to save contacts to an address book, so that it's easy to text them again without re-typing their phone number. 
 
-####################
-ISSUE: dropdown menu in new message form breaks integration test b/c receiving contact now chosen directly rather than to number being entered directly
-####################
+_ISSUE: dropdown menu in new message form breaks integration test b/c receiving contact now chosen directly rather than to number being entered directly_
 
-*  As a user, I want to send a message to more than one person at once, so that I can mass text my friends. DONE
+*  As a user, I want to send a message to more than one person at once, so that I can mass text my friends.
 
-####################
-ISSUE: ajax after new message created is now faulty b/c of functionality to send to multiple contacts
-####################
+_ISSUE: ajax after new message created is now faulty b/c of functionality to send to multiple contacts_
